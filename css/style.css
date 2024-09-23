@@ -1,0 +1,164 @@
+:root {
+    --main-font: 'Press Start 2P';
+    --secondary-font: 'Noto Sans';
+    --default-font: 'Montserrat';
+
+    --main-text-color: #fafafa;
+
+
+    --header-gradient: linear-gradient(to right, #000000, #0a0a0a);
+    --web-gradient: radial-gradient(circle at 24.1% 68.8%, rgb(26, 26, 26) 0%, rgb(0, 0, 0) 99.4%);
+}
+
+* {
+    font-family: var(--secondary-font);
+    color: var(--main-text-color);
+}
+
+.page {
+    padding: 0;
+
+    position: relative;
+    overflow: visible;
+
+}
+
+.header {
+    background: var(--header-gradient);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+body {
+    overflow: visible;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: var(--web-gradient);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header .logo span {
+    font-family: var(--main-font);
+}
+
+.header .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.header nav>ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+nav {}
+
+.header nav ul li {
+    display: block;
+    padding: 1.5rem 1rem;
+    list-style-type: none;
+    width: 8rem;
+    height: 100%;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+.col-8:has(nav ul li) {
+    padding: 0 0;
+}
+
+.drop-down-parent {
+    position: relative;
+}
+
+.drop-down-parent::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url(../assets/svgs/dropdown-white.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 50%;
+    right: 5px;
+    position: absolute;
+
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.drop-down-parent:hover ul.drop-down-menu {
+    visibility: visible;
+}
+
+ul.drop-down-menu {
+    visibility: hidden;
+    position: absolute;
+
+    left: 0;
+    top: calc(100%);
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+}
+
+li.drop-down-menu-child {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+
+    background-color: grey;
+}
+
+li.drop-down-menu-child:hover {
+    background-color: white !important;
+}
+
+li.drop-down-menu-child:hover a {
+    color: black;
+}
+
+
+li.drop-down-menu-child a {
+    text-decoration: none;
+}
+
+.header nav ul li:hover {
+    background-color: var(--web-gradient);
+    cursor: pointer;
+}
+
+.right-header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    flex-wrap: nowrap;
+
+}
+
+.right-header .lang {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+}
+
+.right-header .merch a {
+    font-family: var(--main-font);
+    text-decoration: none;
+}
+
+/* End Header******************************* */
+
+.herosection {
+    columns: 400px;
+}
