@@ -169,6 +169,7 @@ li.drop-down-menu-child a {
 .slider {
     height: 100vh;
     position: relative;
+
 }
 
 .slider .list .item {
@@ -251,6 +252,8 @@ li.drop-down-menu-child a {
     z-index: 100;
 }
 
+.arrows button:hover {cursor: pointer;}
+
 .arrows button {
     background-color: #eee5;
     border: none;
@@ -290,6 +293,10 @@ li.drop-down-menu-child a {
     filter: brightness(.5s);
     transition: .5s;
     flex-shrink: 0;
+}
+
+.thumbnail .item:hover {
+    cursor: pointer;
 }
 
 .thumbnail .item img {
