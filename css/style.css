@@ -195,7 +195,7 @@ li.drop-down-menu-child a {
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(to top, #000 40%, transparent);
+    background-image: linear-gradient(to top, #000 20%, transparent);
 }
 
 .slider .list .item .content {
@@ -240,11 +240,11 @@ li.drop-down-menu-child a {
 }
 
 .slider .list .item.active h2 {
-    animation-delay: 1s;
+    animation-delay: .5s;
 }
 
 .slider .list .item.active p:nth-child(3) {
-    animation-duration: 1.3s;
+    animation-duration: 1s;
 }
 
 .arrows {
@@ -274,8 +274,11 @@ li.drop-down-menu-child a {
 }
 
 .thumbnail {
+
+    /* background-color: red; */
+
     position: absolute;
-    bottom: 5px;
+    bottom: 100px;
     z-index: 11;
     display: flex;
     gap: 10px;
@@ -283,6 +286,9 @@ li.drop-down-menu-child a {
     height: 250px;
     padding: 0 50px;
     box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .thumbnail::-webkit-scrollbar {
@@ -292,7 +298,7 @@ li.drop-down-menu-child a {
 .thumbnail .item {
     width: 150px;
     height: 220px;
-    filter: brightness(.5s);
+    filter: brightness(.5);
     transition: .5s;
     flex-shrink: 0;
 }
@@ -309,7 +315,10 @@ li.drop-down-menu-child a {
 }
 
 .thumbnail .item.active {
-    filter: brightness(1.5);
+    filter: brightness(1);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 16px, rgba(255, 255, 255, 0.05) 0px 8px 32px;
+
+    width: 230px;
 }
 
 .thumbnail .item .content {
@@ -320,7 +329,21 @@ li.drop-down-menu-child a {
 @media screen and (max-width: 678px) {
     .thumbnail {
         justify-content: flex-start;
+        bottom: 20%;
     }
+
+    .thumbnail .item {
+        width: 80px;
+        height: 110px;
+    }
+
+    .thumbnail .content {
+        display: none;
+    }
+
+    .thumbnail .item.active {
+        width: 115px;
+    } 
 
     .slider .list .item .content h2 {
         font-size: 60px;
