@@ -36,7 +36,7 @@
 body {
     overflow: visible;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: var(--web-gradient);
+    background: black;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -326,6 +326,22 @@ li.drop-down-menu-child a {
     inset: auto 10px 10px 10px;
 }
 
+@media screen and (max-width: 950px) {
+    .thumbnail {
+        justify-content: flex-start;
+        bottom: 20%;
+    }
+
+    .thumbnail .item {
+        width: 130px;
+        height: 180px;
+    }
+
+    .thumbnail .item.active {
+        width: 150px;
+    } 
+}
+
 @media screen and (max-width: 678px) {
     .thumbnail {
         justify-content: flex-start;
@@ -333,8 +349,8 @@ li.drop-down-menu-child a {
     }
 
     .thumbnail .item {
-        width: 80px;
-        height: 110px;
+        width: 100px;
+        height: 150px;
     }
 
     .thumbnail .content {
@@ -342,7 +358,7 @@ li.drop-down-menu-child a {
     }
 
     .thumbnail .item.active {
-        width: 115px;
+        width: 120px;
     } 
 
     .slider .list .item .content h2 {
@@ -352,4 +368,35 @@ li.drop-down-menu-child a {
     .arrows {
         top: 10%;
     }
+}
+
+/* End Slider, Start About Me */
+
+.about-me {
+}
+
+.about-me h2 {
+    font-family: var(--main-font);
+    text-align: center;
+}
+
+.about-me .about-me-paragraph {
+    margin-top: 4rem;
+    columns: 400px;
+    column-gap: 40px;
+    column-rule-style: solid;
+}
+
+figure {
+    margin: 1rem;
+}
+
+figure img {
+    border-radius: 10px;
+}
+
+figcaption {
+    font-family: var(--main-font);
+    font-style: italic;
+    text-align: center;
 }
