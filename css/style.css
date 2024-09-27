@@ -180,6 +180,7 @@ li.drop-down-menu-child a {
     overflow: hidden;
     opacity: 0;
     transition: .5s;
+    top: 50px;
 }
 
 .slider .list .item img {
@@ -278,7 +279,7 @@ li.drop-down-menu-child a {
     /* background-color: red; */
 
     position: absolute;
-    bottom: 100px;
+    bottom: 50px;
     z-index: 11;
     display: flex;
     gap: 10px;
@@ -329,7 +330,7 @@ li.drop-down-menu-child a {
 @media screen and (max-width: 950px) {
     .thumbnail {
         justify-content: flex-start;
-        bottom: 20%;
+        bottom: 50px;
     }
 
     .thumbnail .item {
@@ -345,7 +346,7 @@ li.drop-down-menu-child a {
 @media screen and (max-width: 678px) {
     .thumbnail {
         justify-content: flex-start;
-        bottom: 20%;
+        bottom: 30px;
     }
 
     .thumbnail .item {
@@ -372,6 +373,9 @@ li.drop-down-menu-child a {
 
 /* End Slider, Start About Me */
 
+.slider {
+}
+
 .about-me {
 }
 
@@ -385,18 +389,81 @@ li.drop-down-menu-child a {
     columns: 400px;
     column-gap: 40px;
     column-rule-style: solid;
+    column-rule-width: 1px;
 }
 
-figure {
-    margin: 1rem;
+.about-me .about-me-paragraph * {
 }
 
-figure img {
-    border-radius: 10px;
+.about-me .about-me-paragraph figure {
+    position: relative
 }
 
-figcaption {
+.about-me .about-me-paragraph figure img {
+    border-radius: 20px;
+}
+
+.about-me .about-me-paragraph figcaption {
     font-family: var(--main-font);
     font-style: italic;
+    text-align: center;
+
+    color: white;
+    text-shadow: #000000 1px 1px;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+}
+
+.about-me .about-me-paragraph figure:hover figcaption{
+    display: block;
+}
+
+.about-me .about-me-paragraph figure::after{
+}
+
+/* .about-me .about-me-paragraph figcaption:hover {
+    color: #b6b6b6;
+    display: block;
+} */
+
+p.italic-paragraph {
+    font-style: italic;
+}
+
+.story {
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #b6b6b6;  /* Ensure text inside the story container is light for readability */
+}
+
+.chapter {
+    margin-bottom: 2rem;
+}
+
+.chapter h3 {
+    font-size: 1.5rem;
+    color: #ffffff;  /* White color for chapter headings */
+    margin-bottom: 1rem;
+}
+
+.chapter p {
+    margin-bottom: 1rem;
+    color: #b6b6b6;  /* Light color for paragraph text */
+}
+
+
+
+/* End About Me Section, Start Songs Section */
+
+.releases {
+    margin-top: 72px;
+}
+
+.releases h2 {
+    font-family: var(--main-font);
     text-align: center;
 }
