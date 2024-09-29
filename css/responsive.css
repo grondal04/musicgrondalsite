@@ -1,0 +1,55 @@
+@media screen and (max-width: 950px) {
+    .thumbnail {
+        justify-content: flex-start;
+        bottom: 50px;
+    }
+
+    .thumbnail .item {
+        width: 130px;
+        height: 180px;
+    }
+
+    .thumbnail .item.active {
+        width: 150px;
+    } 
+}
+
+@media screen and (max-width: 678px) {
+    .thumbnail {
+        justify-content: flex-start;
+        bottom: 30px;
+    }
+
+    .thumbnail .item {
+        width: 100px;
+        height: 150px;
+    }
+
+    .thumbnail .content {
+        display: none;
+    }
+
+    .thumbnail .item.active {
+        width: 120px;
+    } 
+
+    .slider .list .item .content h2 {
+        font-size: 60px;
+    }
+
+    .arrows {
+        top: 10%;
+    }
+}
+
+@media screen and (max-width: 1292px) {
+    .releases .grid-songs {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width: 695px) {
+    .small-screen-disapear {
+        display: none;
+    }
+}
